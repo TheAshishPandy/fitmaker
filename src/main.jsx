@@ -205,7 +205,11 @@ function Hero({ activePage, setActivePage }) {
   const page = pageContent[activePage];
 
   return (
-    <section className="hero section" id="home">
+    <section
+      className="hero section"
+      id="home"
+      style={{ "--hero-image": `url(${page.image})` }}
+    >
       <div className="hero-copy">
         <p className="eyebrow">{page.eyebrow}</p>
         {activePage === "Home" ? (
